@@ -4,21 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>QR Code Generator</title>
 </head>
 
 <body>
 
-  <main>
+  <main class="qr-main-container">
 
-    <input type="text" placeholder="Enter you text or URL">
+    <h1>QR Code Generator</h1>
 
-    <div class="qr-container"></div>
+    <input class="qr-input" type="text" placeholder="Enter you text or URL">
+    <div class="invalid-text">Please enter some texts or url</div>
 
-    <button class="qr-btn">Generate QR Code</button>
+    <div class="qrcode"></div>
+    <img class="qr-img" src="img/broken.png" loading="lazy" alt="qrImage"
+      onerror="this.onerror=null;this.src='img/broken.png'">
+
+    <button class="btn js-btn">Generate Using <span style="color: hsl(240, 100%, 75%);">Local</span> Method</button>
+    <button class="btn btn-online">Generate Using <span style="color: hsl(0, 100%, 75%);">Online</span> Method</button>
 
   </main>
 
+
+  <script src="qrcode.min.js">
+    // lib link : https://github.com/davidshimjs/qrcodejs
+  </script>
+  <script type="module" src="localQRCodeGenerator.js">
+    //TODO: something
+    //FIXME:
+    // button animation
+    // const button = document.querySelector(".button");
+    // button.addEventListener("click", (e) => {
+    //   e.preventDefault;
+    //   button.classList.add("animate");
+    //   setTimeout(() => {
+    //     button.classList.remove("animate");
+    //   }, 600);
+    // });
+  </script>
 </body>
 
 </html>
