@@ -1,9 +1,3 @@
-import { QRRequester } from './onlineQRcodeRequester.js'
-
-
-
-
-
 
 
 loadPage();
