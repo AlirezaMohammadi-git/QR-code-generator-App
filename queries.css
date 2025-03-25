@@ -1,0 +1,25 @@
+/* Mobile screens */
+/* 576px / 16px = 36rem */
+@media (max-width:36rem) {
+
+  html {
+    font-size: 50%;
+    /* 8px based : 8 / 16 (default browser font size) = 0.5 */
+  }
+
+  body {
+    max-height: 77.8rem;
+  }
+
+
+  .qr-main-container {
+    min-width: auto;
+    width: 90%;
+    border: 2px solid hsl(204, 19%, 22%);
+    background-color: #36454F;
+  }
+
+  .btn-online {
+    margin-top: 2.6rem;
+  }
+}
